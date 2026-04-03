@@ -63,3 +63,28 @@ alter table books modify Bookid char(6) primary key;
 desc books;
 alter table books drop primary key;
 desc books;
+create table company
+(
+company_id int(11) primary key,
+company_name varchar(50),
+company_address varchar(200)
+);
+desc company;
+alter table company modify company_address varchar(200) not null;
+desc company;
+alter table company modify company_address varchar(206);
+desc company;
+alter table company modify company_address varchar(206) unique;
+desc company;
+alter table company modify company_address varchar(206);
+desc company;
+alter table company drop index company_address;
+desc company;
+alter table company add company_tel varchar(20) default '0371-';
+desc company;
+alter table company modify company_name varchar(55) unique;
+
+alter table company modify company_address varchar(200) not null;
+desc company;
+alter table company modify company_id int(11) auto_increment;
+desc company;
